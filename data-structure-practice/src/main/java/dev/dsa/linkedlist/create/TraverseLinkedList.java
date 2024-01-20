@@ -11,8 +11,17 @@ public class TraverseLinkedList {
             System.out.print(tmp.data);
             tmp = tmp.next;
             if (Objects.nonNull(tmp)) {
-                System.out.print("->");
+                System.out.print("-->");
             }
         }
+    }
+
+    public static void traverseLinkedListWithRecursion(Node head) {
+        if (Objects.isNull(head)) return;
+        System.out.print(head.data);
+        if (Objects.nonNull(head.next)){
+            System.out.print("-->");
+        }
+        traverseLinkedListWithRecursion(head.next);
     }
 }
