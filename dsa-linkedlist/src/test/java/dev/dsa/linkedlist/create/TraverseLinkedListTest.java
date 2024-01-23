@@ -1,22 +1,20 @@
 package dev.dsa.linkedlist.create;
 
 import dev.dsa.linkedlist.Node;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class TraverseLinkedListTest {
 
     private Node head;
 
-    @Before
+    @BeforeEach
     public void setUp() {
-        head = CreateLinkedListRunner.createLinkedList();
+        head = CreateLinkedListRunner.createLinkedListOfSize();
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
         head = null;
     }
